@@ -45,8 +45,3 @@ sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 sudo iptables-save
 
 sudo iptables -L
-
-curl https://localhost
-curl http://16.170.155.63
-
-
