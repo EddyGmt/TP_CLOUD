@@ -55,7 +55,7 @@ resource "null_resource" "tutu" {
     user = "ubuntu"
     private_key = file("./TP_CLOUD")
     host = aws_instance.my_ec2_instance.public_ip
-    timeout = "2m"
+    timeout = "5m"
   }
 
   provisioner "file" {

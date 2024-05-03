@@ -10,7 +10,7 @@ sudo apt install -y curl apt-transport-https ca-certificates software-properties
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 # Ajout du dépôt Docker
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 # Mise à jour des paquets
 sudo apt update
@@ -43,4 +43,10 @@ sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
 
 # Enregistrer les modifications dans iptables
 sudo iptables-save
+
+sudo iptables -L
+
+curl https://localhost
+curl http://16.170.155.63
+
 
